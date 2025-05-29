@@ -68,71 +68,42 @@ const theme = createTheme({
   }
 });
 
+import TaskList from './components/TaskList';
+
 function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-
       <AppBar position="fixed">
         <Toolbar>
           <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
             <Typography
               variant="h6"
               sx={{
-                mr: 4,
                 display: 'flex',
                 alignItems: 'center',
                 gap: 1
               }}
             >
-              <span style={{ color: '#E87A41' }}>*</span> KAVIA AI
+              <span style={{ color: '#E87A41' }}>✓</span> TaskEase
             </Typography>
           </Box>
-          <Button
-            variant="contained"
-            color="primary"
-            sx={{ ml: 2 }}
-          >
-            Template Button
-          </Button>
         </Toolbar>
       </AppBar>
 
-      <Container maxWidth="md">
+      <Container maxWidth="sm">
         <Box sx={{
-          pt: 15,
+          pt: 12,
           pb: 8,
-          textAlign: 'center',
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: 3
         }}>
           <Typography
-            variant="subtitle1"
-            sx={{ color: '#E87A41', fontWeight: 500 }}
+            variant="h4"
+            component="h1"
+            sx={{ mb: 4, textAlign: 'center' }}
           >
-            AI Workflow Manager Template
+            My Tasks
           </Typography>
-
-          <Typography variant="h1" component="h1">
-            main_container_for_taskease
-          </Typography>
-
-          <Typography
-            variant="subtitle1"
-            sx={{ maxWidth: '600px', mb: 2 }}
-          >
-            Start building your application.
-          </Typography>
-
-          <Button
-            variant="contained"
-            color="primary"
-            size="large"
-          >
-            Button
-          </Button>
+          <TaskList />
         </Box>
       </Container>
     </ThemeProvider>

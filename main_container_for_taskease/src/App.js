@@ -68,8 +68,6 @@ const theme = createTheme({
   }
 });
 
-import TaskList from './components/TaskList';
-
 function App() {
   return (
     <ThemeProvider theme={theme}>

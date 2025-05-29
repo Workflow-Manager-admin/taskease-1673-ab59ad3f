@@ -1,0 +1,4 @@
+{
+    "command": "npm install && npx tsc --noEmit && npm test -- --ci",
+    "working_directory": "/tmp/kavia/workspace/code-generation/taskease-1673-ab59ad3f/main_container_for_taskease"
+}
